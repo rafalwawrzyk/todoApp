@@ -1,15 +1,17 @@
 <template>
-  <div id="app">
-    
-    
+  <div>
+    <todos></todos>
   </div>
 </template>
 
 <script>
 
+import Todos from './components/main.vue'
 
 export default {
-  name: 'app',
+  components:{
+      'todos':Todos
+  }
   
 }
 </script>
