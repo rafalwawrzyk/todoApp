@@ -14,7 +14,7 @@
     </div>
 
     <div class="listTableContainer">
-        <div>
+        <div class="todoCont">
             <thead>
                 <th>Checkmark Done</th>
                 <th>Task name</th>
@@ -151,6 +151,7 @@
         flex-direction: column;
         
     }
+    
     
     th,
     td {
