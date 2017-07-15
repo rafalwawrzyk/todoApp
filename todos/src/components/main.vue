@@ -89,10 +89,11 @@
     }
     
     form{
-        width: 60%;
+        width: 80%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 80px;
     }
     
     .firstInput{
@@ -104,7 +105,7 @@
         padding: 10px;
     }
     .submit{
-        width:100%;
+        width:50%;
         background-color: #25d925;
         height: 50px;
         border: none;
@@ -134,6 +135,7 @@
         color: white;
         text-align: center;
         padding: 20px;
+        margin-top:0px;
     }
     
     thead,tbody{
@@ -155,8 +157,9 @@
     
     th,
     td {
-        border: 1px solid #9b8282;
+        border-bottom: 1px solid #9b8282;
         font-size: 20px;
+        
     }
     
     th{
@@ -164,6 +167,8 @@
         font-size: 25px;
         color: #bababa;
         padding: 20px;
+        padding-right: 60px;
+        padding-left: 60px;
         
     }
     
