@@ -3,10 +3,9 @@
     
     <h1>{{title}}</h1>
     <div class="inputNav">
-       <h2>Add new task</h2>
        <div class="formContent">
            <form v-on:submit.prevent="addTask">
-           <input class="firstInput" type="text" v-model="tasks.name">
+           <input class="firstInput" type="text" v-model="tasks.name" placeholder="Add Task">
            <input class="submit" type="submit">
            </form>
         </div>
@@ -20,11 +19,11 @@
                 <th>Checkmark Done</th>
                 <th>Task name</th>
                 <th>Delete</th>
-                </thead>
+            </thead>
             <tbody>
                 <tr v-for="(task,index) in tasks">
                     <td>
-                        <input type="checkbox"v-model="task.done" >
+                        <input class="check" type="checkbox"v-model="task.done" >
                     </td>
                     <td><span v-bind:class="{checked: task.done }">{{task.name}}</span></td>
                     <td><button v-on:click="removeTask(task)">Delete</button></td>
@@ -74,30 +73,60 @@
         box-sizing: border-box;
         margin: 0;
         padding: 0;
+        width: 100vw;
     }
     
     .app {
-        background-color: #b4b9be;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
     }
     
     .listTableContainer{
         display: flex;
         justify-content: center;
+        
+    }
+    
+    form{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .firstInput{
-        width: 100vw;
+        width: 100%;
         height: 50px;
         font-size:30px;
-        background-color: rgba(255, 255, 255, 0.39);
-        border:none;
+        color:#bababa;
+        margin-bottom: 30px;
+        padding: 10px;
     }
     .submit{
-        
+        width:100%;
+        background-color: #25d925;
+        height: 50px;
+        border: none;
+        font-size:30px;
+        color:#fff;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    .submit:hover{
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: 300ms ease-in-out;
     }
     
     .formContent {
         display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        
     }
     
     h1 {
@@ -105,6 +134,10 @@
         color: white;
         text-align: center;
         padding: 20px;
+    }
+    
+    thead,tbody{
+        width:100%;
     }
     
     .listTableContainer {
@@ -116,16 +149,60 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        
     }
     
     th,
     td {
+        border: 1px solid #9b8282;
+        font-size: 20px;
+    }
+    
+    th{
+        color:#020a0b;
+        font-size: 25px;
+        color: #bababa;
         padding: 20px;
-        border: 1px solid #c92c2c;
+        
+    }
+    
+    td{
+        border:1px solid white;
+        padding: 50px;
+    }
+    
+    button{
+        background-color: #ff4444;
+        border: none;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+        color:#fff;
+        
+    }
+    
+    button:hover{
+        background-color: #e00505;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: 300ms ease-in-out;
+    }
+    
+    .check{
+        height: 30px;
+        width: 30px;
+        display: block;
+        margin: 0 auto;
+        cursor: pointer;
+         
+    }
+    
+    .check:hover{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        transition: 300ms ease-in-out
     }
     
     .checked {
-        text-decoration: line-through;
+        text-decoration: line-through #ff4444;
     }
 
 </style>
