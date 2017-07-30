@@ -133,11 +133,12 @@
     }
     
     h1 {
-        background-color: #1d1d1d;
+        background-color: #605959;
         color: white;
         text-align: center;
-        padding: 20px;
+        padding: 40px;
         margin-top:0px;
+        font-size: 2.5rem;
     }
     
     thead,tbody{
