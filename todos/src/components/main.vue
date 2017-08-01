@@ -215,5 +215,7 @@
     .checked {
         text-decoration: line-through #ff4444;
     }
+    
+   
 
 </style>
