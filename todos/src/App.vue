@@ -4,18 +4,6 @@
   </div>
 </template>
 
-<script>
+<script src="./app.js"></script>
 
-import Todos from './components/main.vue'
-
-export default {
-  components:{
-      'todos':Todos
-  }
-  
-}
-</script>
-
-<style>
-
-</style>
+<style src="./app.css"></style>
